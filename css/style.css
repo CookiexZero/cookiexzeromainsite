@@ -11,15 +11,15 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body takes up full viewport height */
+    min-height: 100vh;
 }
 
 header {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px; /* Reduced padding */
+    padding: 15px;
     background-color: rgba(18, 18, 18, 0.8);
     position: fixed;
     top: 0;
@@ -27,14 +27,14 @@ header {
     width: 100%;
     height: 60px;
     z-index: 1000;
-    backdrop-filter: blur(6px); /* Applied blur to header */
+    backdrop-filter: blur(6px);
 }
 
 .avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     position: relative;
     border: 3px solid rgba(139, 12, 139, 0.7); /* Фиолетовая обводка вокруг аватарки */
     padding: 2px; /* Отступ между аватаркой и обводкой */
@@ -48,18 +48,16 @@ header {
 nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #ffffff; /* Цвет ссылок */
+    color: #ffffff;
     font-size: 16px;
 }
 
-/* Убираем изменение цвета при наведении */
 nav a:hover {
-    color: #ffffff; /* Цвет при наведении */
+    color: #ffffff;
 }
 
-/* Убираем фиолетовый цвет для посещённых ссылок */
 nav a:visited {
-    color: #ffffff; /* Цвет для посещённых ссылок */
+    color: #ffffff;
 }
 
 .rotated-square {
@@ -71,7 +69,7 @@ nav a:visited {
     top: 600px;
     left: 80%;
     transform: rotate(25deg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     box-shadow: 0 0 50px 20px rgba(128, 0, 128, 0.9);
 }
 
@@ -87,26 +85,25 @@ nav a:visited {
     top: 10%;
     left: -300px;
     opacity: 0.1;
-    transition: opacity 0.3s ease;
-    color: black; /* This doesn't visually do anything since it's a background element */
+    transition: all 0.3s ease-in-out;
+    color: black;
 }
 
 .rotated-avatar:hover {
     opacity: 0.3;
+    transform: scale(0.99);
 }
 
 .text-container {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
     position: absolute;
     top: 300px;
-    /* left: 30%; */
-    /* transform: translate(-50%, -50%); */
     text-align: left;
     margin-left: 4%;
 }
 
 .title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
     font-size: 60px;
     font-weight: 800;
     margin-bottom: 10px;
@@ -154,22 +151,22 @@ footer {
 }
 
 .footer-section a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #ffffff; /* Цвет ссылок */
+    text-decoration: none;
+    color: #ffffff;
 }
 
-/* Убираем фиолетовый цвет для посещённых ссылок в футере */
+
 .footer-section a:visited {
-    color: #ffffff; /* Цвет для посещённых ссылок */
+    color: #ffffff;
 }
 
-/* Убираем изменение цвета при наведении на ссылки в футере */
+
 .footer-section a:hover {
-    color: #ffffff; /* Цвет при наведении */
+    color: #ffffff; 
 }
 
 .footer-section h4 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
     margin-bottom: 10px;
 }
 
@@ -183,7 +180,7 @@ footer {
 }
 
 .footer-description {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
     margin-top: 20px;
     font-size: 12px;
     text-align: left; /* Выровнять текст влево */
@@ -197,6 +194,10 @@ footer {
     color: #494949;
 }
 
+.footer-description a {
+    color: #494949;
+}
+
 .star-container {
     /* position: relative; */
     display: flex;
@@ -205,7 +206,7 @@ footer {
 }
 
 .text-container-star {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
     position: absolute;
     top: 800px;
     left: 47%;
@@ -215,7 +216,7 @@ footer {
 }
 
 .title-star {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
     font-size: 60px; /* Размер заголовка */
     font-weight: 800;
     margin-bottom: 10px;
@@ -239,4 +240,8 @@ footer {
 
 .text3 {
     top: 1150px;
+}
+
+.text3 a{
+    color: #ffffff;
 }
