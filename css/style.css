@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,13 +7,17 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Montserrat, sans-serif;
     background-color: #121212;
     color: #ffffff;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+body p, h1, h2, h3, h4, h5, h6 {
+    cursor: context-menu;
 }
 
 header {
@@ -129,7 +135,10 @@ nav a:visited {
 footer {
     /* background-color: #121212; */
     color: #ffffff;
-    padding: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+    padding-left: 20px;
     position: relative;
     bottom: 0;
     left: 0;
@@ -183,11 +192,11 @@ footer {
      
     margin-top: 20px;
     font-size: 12px;
-    text-align: left; /* Выровнять текст влево */
+    text-align: left;
     color: #494949;
-    position: absolute; /* Фиксируем позицию описания */
-    bottom: 20px; /* Отступ снизу */
-    left: 20px; /* Отступ слева */
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
 }
 
 .footer-description a:visited {
@@ -199,41 +208,38 @@ footer {
 }
 
 .star-container {
-    /* position: relative; */
     display: flex;
     align-items: center;
-    margin-top: 50px; /* Отступ сверху для разделения */
+    margin-top: 50px;
 }
 
 .text-container-star {
-     
     position: absolute;
-    top: 800px;
-    left: 47%;
-    /* transform: translate(-50%, -50%); */
+    top: 740px;
+    right: 0;
     text-align: right;
     margin-right: 4%;
 }
 
 .title-star {
      
-    font-size: 60px; /* Размер заголовка */
+    font-size: 60px;
     font-weight: 800;
     margin-bottom: 10px;
 }
 
 .description-star {
-    font-size: 16px; /* Размер описания */
+    font-size: 16px;
 }
 .content2 {
     flex: 1;
-    padding-top: 60px; /* Space for fixed header */
-    padding-bottom: 80px; /* Space for fixed footer */ 
-    text-align: left; /* Consistent text alignment */
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: left;
     margin-top: 550px;
 }
 .rotated-avatar2 {
-    /* margin-top: 300px; */
+
     position: relative;
     top: 100px;
 }
@@ -244,4 +250,28 @@ footer {
 
 .text3 a{
     color: #ffffff;
+}
+
+.button52 {
+    display: inline-flex;
+    background-color: #800080;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px rgba(128, 0, 128, 0.9);
+    opacity: 1.0;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    align-items: center;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.button52:hover {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.description, .title, .text-container-star {
+    width: 500px;
 }
