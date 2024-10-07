@@ -51,7 +51,7 @@ var redirectPaths = [
     "/report/report.html",
     "/error/error.html",
     "/guides/guides.html",
-    "/main/index.html"
+    "/main/main.html"
 ];
 
 // Целевая страница для переадресации
@@ -76,7 +76,7 @@ function isMobileDevice() {
 var currentPagePath = "/m/screensizeerror/screensizeerror.html";
 
 // Целевая страница для переадресации
-var newPageURL = "/main/index.html";
+var newPageURL = "/main/main.html";
 
 // Получаем текущий путь страницы (без домена)
 var currentPath = window.location.pathname;
@@ -85,3 +85,4 @@ var currentPath = window.location.pathname;
 if (!isMobileDevice() && currentPath === currentPagePath) {
     window.location.href = newPageURL; // Выполняем переадресацию
 }
+

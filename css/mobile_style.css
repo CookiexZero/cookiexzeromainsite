@@ -27,11 +27,12 @@ header {
     align-items: center;
     padding: 15px;
     background-color: rgba(18, 18, 18, 0.8);
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
+    max-width: 1000px;
     z-index: 1000;
     backdrop-filter: blur(6px);
 }
@@ -72,7 +73,7 @@ nav a:visited {
     background-color: #800080;
     border-radius: 70px;
     position: absolute;
-    top: 600px;
+    top: 400px;
     left: 80%;
     transform: rotate(25deg);
     transition: transform 0.3s ease-in-out;
@@ -84,12 +85,12 @@ nav a:visited {
 }
 
 .rotated-avatar {
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     position: absolute;
     top: 10%;
-    left: -300px;
+    left: -350px;
     opacity: 0.1;
     transition: all 0.3s ease-in-out;
     color: black;
@@ -103,14 +104,14 @@ nav a:visited {
 .text-container {
      
     position: absolute;
-    top: 300px;
+    top: 250px;
     text-align: left;
     margin-left: 4%;
 }
 
 .title {
      
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 800;
     margin-bottom: 10px;
 }
@@ -120,7 +121,7 @@ nav a:visited {
 }
 
 .description {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
@@ -133,30 +134,29 @@ nav a:visited {
 
 
 footer {
-    /* background-color: #121212; */
+    display: flex;
+    flex-direction: column; /* Разделим футер на две вертикальные зоны */
+    justify-content: space-between; /* Разделим футер на зоны с контентом и описанием */
+    align-items: stretch; /* Элементы внутри футера будут растянуты на всю ширину */
+    padding: 20px;
+    background-color: #121212;
     color: #ffffff;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 35px;
-    padding-left: 20px;
+    width: 100%;
     position: relative;
     bottom: 0;
     left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Оставляем это для колонки справа */
-    align-items: flex-end; /* Центрируем элементы по вертикали */
-    z-index: 1000;
 }
 
 .footer-content {
     display: flex;
-    justify-content: flex-end; /* Перемещаем колонки вправо */
-    flex-grow: 1; /* Позволяем колонкам занимать доступное пространство */
+    justify-content: space-between; /* Распределение элементов внутри content по сторонам */
+    width: 100%; /* Полная ширина для растягивания контента */
 }
 
 .footer-section {
-    margin-left: 40px;
+    font-size: 13px;
+    width: auto;
+    /* margin-left: 20px;  */
 }
 
 .footer-section a {
@@ -189,14 +189,11 @@ footer {
 }
 
 .footer-description {
-     
-    margin-top: 20px;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
     color: #494949;
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
+    margin-top: 20px;
+    width: 100%; /* Заставляем описание занимать всю ширину */
 }
 
 .footer-description a:visited {
@@ -209,13 +206,15 @@ footer {
 
 .star-container {
     display: flex;
+    position: relative;
     align-items: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    top: 500px;
 }
 
 .text-container-star {
     position: absolute;
-    top: 740px;
+    top: 600px;
     right: 0;
     text-align: right;
     margin-right: 4%;
@@ -223,7 +222,7 @@ footer {
 
 .title-star {
      
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 800;
     margin-bottom: 10px;
 }
@@ -234,9 +233,9 @@ footer {
 .content2 {
     flex: 1;
     padding-top: 60px;
-    padding-bottom: 80px;
+    padding-bottom: 650px;
     text-align: left;
-    margin-top: 550px;
+    /* margin-top: 550px; */
 }
 .rotated-avatar2 {
 
@@ -245,7 +244,7 @@ footer {
 }
 
 .text3 {
-    top: 1150px;
+    top: 990px;
 }
 
 .text3 a{
@@ -280,7 +279,7 @@ footer {
 }
 
 .description, .title, .text-container-star {
-    width: 500px;
+    width: 250px;
 }
 
 .error_msg {
