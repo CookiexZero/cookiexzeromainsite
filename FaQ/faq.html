@@ -12,8 +12,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- типо хеадер -->
+    <header>
+        <a href="/main/main.html"><img src="/img/avatar.jpg" alt="Аватарка" class="avatar"></a>
+        <nav>
+                <a class="button52" href="/projects/projects.html">Проекты</a>
+            </div>
+        </nav>
+    </header>
+    <!-- говнокод начало -->
+    <div class="questions-block">
+        <h1 class="faq-description">FaQ (Часто задаваемые вопросы)</h1>
+        <div id="question1" class="question" onclick="toggleExpand('question1', 'a1')">
+            <div class="q1">
+                <p>Кто я ты самом деле?</p>
+                <img src="/img/expand.svg" alt="expand-ico">  
+            </div>
+            <div id="a1" class="a1">
+                <p>Я - Чубай Владмиир, мне 15 лет. Учусь в 9 классе, в ГБОУ СОШ №9 имени З. И. Парфеновой. Я хочу стать web-разработчиком, делать сайты, web приложения и что-то похожее.</p>
+            </div>
+        </div> 
+        <div id="question2" class="question" onclick="toggleExpand('question2', 'a2')">
+            <div class="q1">
+                <p>Что тебе нравится?</p>
+                <img src="/img/expand.svg" alt="expand-ico">  
+            </div>
+            <div id="a2" class="a1">
+                <p>Довольно сложный вопрос для меня. Мне нравится создавать что-то новое, уникальное, приносить пользу людям. Мечаю создать проект которым будут пользоваться люди. А так мне нравится играть, слушать музыку и кодить <3</p>
+            </div> 
+        </div>
+        <div id="question3" class="question" onclick="toggleExpand('question3', 'a3')">
+            <div class="q1">
+                <p>Зачем нужен этот сайт?</p>
+                <img src="/img/expand.svg" alt="expand-ico">  
+            </div>
+            <div id="a3" class="a1">
+                <p>Это мое портфолио, постепенно оно будет пополняться. Тут ты можешь найти ссылки на любой способ связи со мной, посмотреть и воспользоваться любым моим проектом. Скоро буду делать гайды по разным темам и публиковать тут.</p>
+            </div> 
+        </div>
+        <div id="question4" class="question" onclick="toggleExpand('question4', 'a4')">
+            <div class="q1">
+                <p>Есть ли планы по развитию сайта?</p>
+                <img src="/img/expand.svg" alt="expand-ico">  
+            </div>
+            <div id="a4" class="a1">
+                <p>Да. Доделать мобильную версию, добавить больше анимаций, оптимизировать код и все такое))) я усталь...</p>
+            </div> 
+        </div>
+        <div id="question5" class="question" onclick="toggleExpand('question5', 'a5')">
+            <div class="q1">
+                <p>Пользовался ли ты нейросетями при создании сайта?</p>
+                <img src="/img/expand.svg" alt="expand-ico">  
+            </div>
+            <div id="a5" class="a1">
+                <p>Очень круто что в нашем мире есть нейросети, но бездумно генерировать код это плохо. Я использовал их только для объяснения непонятных мне элементов, если не находил нужный ответ в интернете <br>໒꒰ྀིᵔ ᵕ ᵔ ꒱ྀི১</p>
+            </div> 
+        </div>
+        <div id="question6" class="question" onclick="toggleExpand('question6', 'a6')">
+            <div class="q1">
+                <p>Как я могу использовать код с твоего сайта?</p>
+                <img src="/img/expand.svg" alt="expand-ico">  
+            </div>
+            <div id="a6" class="a1">
+                <p>Как угодно. Тип вообще че хочешь делай)</p>
+            </div> 
+        </div>
+    </div>
+    <!-- говнокод конец -->
 
-    
+    <!-- футер и в африке футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="mailto:thecookieyt@vk.com">thecookieyt@vk.com</a></li>
+                    <li><a href="tel:+79787745635">8 978 774-56-35</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Проекты</h4>
+                <ul>
+                    <li><a href="https://t.me/alltoggle_bot" target="_blank">AllBot</a></li>
+                    <li><a href="#" target="_blank">MemBot</a></li>
+                    <li><a href="/guides/guides.html">Гайды</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Помощь</h4>
+                <ul>
+                    <li><a href="/FaQ/faq.html">FaQ (Часто задаваемые вопросы)</a></li>
+                    <li><a href="/report/report.html">Репорт проблем с ботами/сайтом</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-description">
+            <p>© 2024 Сайт сделан CookiexZero. Данный сайт - мое портфолио и является <a href="https://github.com/CookiexZero/cookiexzeromainsite" target="_blank">Open Source</a> проектом.</p>
+        </div>
+    </footer>
 
 <!-- js конектим))) -->
     <script src="/js/script.js"></script>

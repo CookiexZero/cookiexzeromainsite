@@ -18,7 +18,6 @@ document.oncopy = nocopy;
 
 // Массив путей страниц для переадресации
 var redirectPaths = [
-    "/FaQ/faq.html",
     "/help/help.html",
     "/projects/projects.html",
     "/report/report.html",
@@ -45,13 +44,11 @@ if (redirectPaths.includes(currentPath)) {
 
 // Массив путей страниц для переадресации
 var redirectPaths = [
-    "/FaQ/faq.html",
     "/help/help.html",
     "/projects/projects.html",
     "/report/report.html",
     "/error/error.html",
-    "/guides/guides.html",
-    "/main/main.html"
+    "/guides/guides.html"
 ];
 
 // Целевая страница для переадресации
@@ -65,12 +62,12 @@ if (redirectPaths.includes(currentPath) && isMobileDevice()) {
     window.location.href = newPageURL; // Выполняем мгновенную переадресацию для мобильных устройств
 }
 
+//ПЕРЕАДРЕСАЦИЯ С МОБ ОШИБКИ НА ПК ВЕРСИЮ САЙТА
+
 // Функция для проверки, является ли устройство мобильным
 function isMobileDevice() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
-
-//ПЕРЕАДРЕСАЦИЯ С МОБ ОШИБКИ НА ПК ВЕРСИЮ САЙТА
 
 // Указываем страницу, с которой будет происходить переадресация
 var currentPagePath = "/m/screensizeerror/screensizeerror.html";
@@ -86,3 +83,93 @@ if (!isMobileDevice() && currentPath === currentPagePath) {
     window.location.href = newPageURL; // Выполняем переадресацию
 }
 
+//ПЕРЕАДРЕСАЦИЯ С МОБ САЙТА НА ПК ВЕРСИЮ САЙТА
+
+// Функция для проверки, является ли устройство мобильным
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Указываем страницу, с которой будет происходить переадресация
+var currentPagePath = "/m/main/main.html";
+
+// Целевая страница для переадресации
+var newPageURL = "/main/main.html";
+
+// Получаем текущий путь страницы (без домена)
+var currentPath = window.location.pathname;
+
+// Проверяем, является ли устройство настольным и совпадает ли текущий путь
+if (!isMobileDevice() && currentPath === currentPagePath) {
+    window.location.href = newPageURL; // Выполняем переадресацию
+}
+
+//ПЕРЕАДРЕСАЦИЯ С ПК НА МОБ ВЕРСИЮ
+
+// Функция для проверки, является ли устройство мобильным
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Указываем страницу, с которой будет происходить переадресация
+var currentPagePath = "/main/main.html";
+
+// Целевая страница для переадресации
+var newPageURL = "/m/main/main.html";
+
+// Получаем текущий путь страницы (без домена)
+var currentPath = window.location.pathname;
+
+// Проверяем, является ли устройство настольным и совпадает ли текущий путь
+if (isMobileDevice() && currentPath === currentPagePath) {
+    window.location.href = newPageURL; // Выполняем переадресацию
+}
+
+//ПЕРЕАДРЕСАЦИЯ С МОБ САЙТА НА ПК ВЕРСИЮ САЙТА
+
+// Функция для проверки, является ли устройство мобильным
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Указываем страницу, с которой будет происходить переадресация
+var currentPagePath = "/FaQ/faq.html";
+
+// Целевая страница для переадресации
+var newPageURL = "/m/screensizeerror/screensizeerror.html";
+
+// Получаем текущий путь страницы (без домена)
+var currentPath = window.location.pathname;
+
+// Проверяем, является ли устройство настольным и совпадает ли текущий путь
+if (isMobileDevice() && currentPath === currentPagePath) {
+    window.location.href = newPageURL; // Выполняем переадресацию
+}
+
+function toggleExpand(questionId, answerId) {
+    // Найдем все вопросы и ответы
+    var questions = document.querySelectorAll('.question');
+    var answers = document.querySelectorAll('.a1');
+
+    // Получим текущий вопрос и ответ
+    var currentQuestion = document.getElementById(questionId);
+    var currentAnswer = document.getElementById(answerId);
+
+    // Проверим, активен ли уже текущий блок
+    var isActive = currentQuestion.classList.contains('active');
+
+    // Сначала свернем все вопросы и ответы
+    questions.forEach(function (question) {
+        question.classList.remove('active');
+    });
+
+    answers.forEach(function (answer) {
+        answer.classList.remove('active');
+    });
+
+    // Если текущий блок не был активен, откроем его
+    if (!isActive) {
+        currentQuestion.classList.add('active');
+        currentAnswer.classList.add('active');
+    }
+}
